@@ -12,6 +12,7 @@
 		1F6D78DE1BB2789300BF6C4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D78DD1BB2789300BF6C4B /* ViewController.m */; };
 		1F6D78E31BB2789300BF6C4B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F6D78E21BB2789300BF6C4B /* Images.xcassets */; };
 		1F6D78F21BB2789300BF6C4B /* LocalizableBugTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D78F11BB2789300BF6C4B /* LocalizableBugTests.m */; };
+		1F89824F1BB2825700A91893 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F8982511BB2825700A91893 /* Localizable.strings */; };
 		E8C00C2189461105663A1306 /* libPods-LocalizableBug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28020DAD3911BFCA36FAA747 /* libPods-LocalizableBug.a */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		1F6D78EB1BB2789300BF6C4B /* LocalizableBugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalizableBugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6D78F01BB2789300BF6C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6D78F11BB2789300BF6C4B /* LocalizableBugTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalizableBugTests.m; sourceTree = "<group>"; };
+		1F8982501BB2825700A91893 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		28020DAD3911BFCA36FAA747 /* libPods-LocalizableBug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalizableBug.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B939411298179347BD9A718 /* Pods-LocalizableBug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalizableBug.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalizableBug/Pods-LocalizableBug.release.xcconfig"; sourceTree = "<group>"; };
 		A2C7CF1BD94A9C0CDE69EADB /* Pods-LocalizableBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalizableBug.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalizableBug/Pods-LocalizableBug.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				1F6D78DD1BB2789300BF6C4B /* ViewController.m */,
 				1F6D78E21BB2789300BF6C4B /* Images.xcassets */,
 				1F6D78D51BB2789300BF6C4B /* Supporting Files */,
+				1F8982511BB2825700A91893 /* Localizable.strings */,
 			);
 			path = LocalizableBug;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F6D78E31BB2789300BF6C4B /* Images.xcassets in Resources */,
+				1F89824F1BB2825700A91893 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +296,17 @@
 			targetProxy = 1F6D78EC1BB2789300BF6C4B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F8982511BB2825700A91893 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F8982501BB2825700A91893 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1F6D78F31BB2789300BF6C4B /* Debug */ = {
