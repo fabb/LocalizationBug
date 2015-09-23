@@ -12,6 +12,7 @@
 		1F6D78DE1BB2789300BF6C4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D78DD1BB2789300BF6C4B /* ViewController.m */; };
 		1F6D78E31BB2789300BF6C4B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F6D78E21BB2789300BF6C4B /* Images.xcassets */; };
 		1F6D78F21BB2789300BF6C4B /* LocalizableBugTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D78F11BB2789300BF6C4B /* LocalizableBugTests.m */; };
+		E8C00C2189461105663A1306 /* libPods-LocalizableBug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28020DAD3911BFCA36FAA747 /* libPods-LocalizableBug.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		1F6D78EB1BB2789300BF6C4B /* LocalizableBugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalizableBugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6D78F01BB2789300BF6C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F6D78F11BB2789300BF6C4B /* LocalizableBugTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalizableBugTests.m; sourceTree = "<group>"; };
+		28020DAD3911BFCA36FAA747 /* libPods-LocalizableBug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalizableBug.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B939411298179347BD9A718 /* Pods-LocalizableBug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalizableBug.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocalizableBug/Pods-LocalizableBug.release.xcconfig"; sourceTree = "<group>"; };
+		A2C7CF1BD94A9C0CDE69EADB /* Pods-LocalizableBug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalizableBug.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocalizableBug/Pods-LocalizableBug.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8C00C2189461105663A1306 /* libPods-LocalizableBug.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,8 @@
 				1F6D78D41BB2789300BF6C4B /* LocalizableBug */,
 				1F6D78EE1BB2789300BF6C4B /* LocalizableBugTests */,
 				1F6D78D31BB2789300BF6C4B /* Products */,
+				C4FD9E5D1EB964731FD146CD /* Pods */,
+				454C90D38CF5B03F497406D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +120,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		454C90D38CF5B03F497406D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28020DAD3911BFCA36FAA747 /* libPods-LocalizableBug.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4FD9E5D1EB964731FD146CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2C7CF1BD94A9C0CDE69EADB /* Pods-LocalizableBug.debug.xcconfig */,
+				3B939411298179347BD9A718 /* Pods-LocalizableBug.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,9 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F6D78F51BB2789300BF6C4B /* Build configuration list for PBXNativeTarget "LocalizableBug" */;
 			buildPhases = (
+				34F676BCBD93DF613CDA603B /* Check Pods Manifest.lock */,
 				1F6D78CE1BB2789300BF6C4B /* Sources */,
 				1F6D78CF1BB2789300BF6C4B /* Frameworks */,
 				1F6D78D01BB2789300BF6C4B /* Resources */,
+				9A2DB680235FF418BFC7AE76 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,6 +230,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34F676BCBD93DF613CDA603B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9A2DB680235FF418BFC7AE76 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocalizableBug/Pods-LocalizableBug-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F6D78CE1BB2789300BF6C4B /* Sources */ = {
@@ -319,6 +378,7 @@
 		};
 		1F6D78F61BB2789300BF6C4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2C7CF1BD94A9C0CDE69EADB /* Pods-LocalizableBug.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LocalizableBug/Info.plist;
@@ -329,6 +389,7 @@
 		};
 		1F6D78F71BB2789300BF6C4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B939411298179347BD9A718 /* Pods-LocalizableBug.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LocalizableBug/Info.plist;
@@ -390,6 +451,7 @@
 				1F6D78F71BB2789300BF6C4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F6D78F81BB2789300BF6C4B /* Build configuration list for PBXNativeTarget "LocalizableBugTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +460,7 @@
 				1F6D78FA1BB2789300BF6C4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
